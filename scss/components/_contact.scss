@@ -1,0 +1,84 @@
+.contact {
+    margin-bottom: $margin*20;
+
+    &__items {
+        position: relative;
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        margin-bottom: $margin*20;
+    }
+
+    &__itemsFlex {
+        @include screen-lg {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+    }
+
+    &__item {
+        height: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        font-size: 1rem;
+        border: none;
+        height: 4rem;
+        border-bottom: 1px solid #000;
+        font-family: arial;
+        width: 90vw;
+        margin: 0 1rem;
+        white-space: nowrap;
+        color: gray;
+
+
+        @include screen-lg {
+            width: 46vw;
+            width: $max-width-lg/2.05;
+        }
+
+
+
+
+    }
+
+    &__textarea {
+        font-size: 1rem;
+        border: none;
+        height: 10rem;
+        border-bottom: 1px solid #000;
+        font-family: arial;
+        margin: 0 1rem;
+        color: gray;
+        width: 90vw;
+
+        @include screen-lg {
+            width: 95vw;
+            height: 15rem;
+            width: $max-width-lg;
+        }
+
+    }
+}
+
+::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.contact .btn--secondary {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 350%);
+
+    @include screen-md {
+        transform: translate(-50%, 400%);
+    }
+
+    @include screen-lg {
+        transform: translate(-50%, 500%);
+    }
+}

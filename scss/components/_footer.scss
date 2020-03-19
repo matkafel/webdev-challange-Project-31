@@ -1,0 +1,92 @@
+.footer {
+    margin-top: $margin*25;
+    width: 100vw;
+    height: 35vh;
+    background-color: #000;
+
+    @include screen-lg {
+        margin-top: $margin* 35;
+        margin-bottom: $margin*10;
+        height: 15vh;
+    }
+
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+
+        @include screen-lg {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__icons {
+        text-align: center;
+        margin: 1rem 0;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+
+    &__ring {
+        position: relative;
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 0.8rem;
+        border: 1px solid #fff;
+        border-radius: 50%;
+
+        .fa {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transform: translate(-50%, -50%);
+
+            &:hover {
+                color: #179;
+            }
+        }
+
+        &:hover {
+
+            background: #fff;
+
+            .fa {
+                color: black;
+            }
+        }
+    }
+
+
+    &__copyright {
+        color: #fff;
+        text-align: center;
+        font-size: 1.2rem;
+        margin: 1rem 0;
+
+        @include screen-lg {
+            font-size: 1.5rem;
+            margin-top: 2.3rem;
+            margin-right: 12rem;
+        }
+    }
+
+    &__arrow {
+        color: #000;
+        text-align: center;
+        margin: 1rem 0;
+        font-size: 1rem;
+
+        @include screen-lg {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+    }
+
+}

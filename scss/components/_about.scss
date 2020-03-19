@@ -1,0 +1,17 @@
+.about {
+  margin-bottom: $margin *8;
+  text-align: center;
+  margin-left: $margin * 2;
+  margin-right: $margin * 2;
+  margin-top: $margin * 2;
+
+  p {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    text-align: justify;
+  }
+
+  a {
+    margin-top: $margin * 3;
+  }
+}

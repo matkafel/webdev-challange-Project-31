@@ -1,0 +1,115 @@
+.portfolio {
+    margin-bottom: $margin * 15;
+    position: relative;
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+
+        @include screen-md {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        position: relative;
+        height: 0;
+        padding-bottom: 75%;
+        overflow: hidden;
+        margin-bottom: $margin * 2;
+
+        @include screen-md {
+            padding-bottom: 35%;
+            margin-left: 0.1rem;
+        }
+
+        @include screen-lg {
+            padding-bottom: 22%;
+            margin: .5rem auto;
+        }
+
+        @media (min-width: 1023px) and (max-width: 1025px) {
+            width: 45%;
+            padding-bottom: 30%;
+            margin: .5rem auto;
+        }
+
+
+
+        img {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            opacity: 0;
+            background: rgba(#000, 0.7) url("../img/portfolio_active_bg.png") no-repeat -220% center;
+            background-size: 64.32% auto;
+            transition: 0.2s;
+        }
+
+        &.is-active,
+        &:hover {
+            &::before {
+                opacity: 1;
+                background-position: -65% center;
+                transition-delay: 0s;
+            }
+        }
+    }
+
+    &__description {
+        position: absolute;
+        left: -100%;
+        bottom: 20.7%;
+        opacity: 0;
+        transition: 0.2s;
+
+        .portfolio__item.is-active &,
+        .portfolio__item:hover & {
+            opacity: 1;
+            left: 19.8%;
+            transition-delay: 0.1s;
+        }
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+
+        @include screen-md {
+            font-size: 2rem;
+        }
+    }
+
+    &__icons {
+        font-size: 1.2rem;
+        color: white;
+        margin: 0.2rem;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.portfolio .btn--secondary {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 120%);
+
+    @include screen-md {
+        transform: translate(-50%, 150%);
+    }
+}

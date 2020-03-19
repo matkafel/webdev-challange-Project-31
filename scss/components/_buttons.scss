@@ -1,0 +1,34 @@
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border: 1.3px solid $primary-color-darker;
+    box-shadow: 0 1rem 2rem rgba(#000, 0.15);
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: .2s;
+    font-size: 1.2rem;
+    margin: .5rem;
+
+
+    &:focus,
+    &:hover {
+        transform: scale(1.2);
+        border-color: $brand-color;
+        background: $brand-color;
+        color: #fff;
+    }
+
+    &--primary {
+        background: $primary-color-darker;
+        color: #fff;
+    }
+
+    &--secondary {
+        padding-right: 2.8rem;
+        padding-left: 2.8rem;
+        background: #fff;
+        color: #000;
+    }
+}

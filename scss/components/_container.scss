@@ -1,0 +1,28 @@
+.container {
+    margin: 0 auto;
+    padding: 0 $margin;
+
+    &-sm {
+        max-width: $max-width-sm;
+
+        @media(min-width: $max-width-sm + $margin*2) {
+            padding: 0;
+        }
+    }
+
+    &-md {
+        max-width: $max-width-md;
+
+        @media (min-width: $max-width-md + $margin * 2) {
+            padding: 0;
+        }
+    }
+
+    &-lg {
+        max-width: $max-width-lg;
+
+        @media (min-width: $max-width-lg + $margin * 2) {
+            padding: 0;
+        }
+    }
+}
